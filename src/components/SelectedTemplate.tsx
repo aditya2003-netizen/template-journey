@@ -4,6 +4,7 @@ import { X, ExternalLink, Check } from "lucide-react";
 import { Template } from "@/data/templates";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import TemplateForm from "./TemplateForm";
 
 interface SelectedTemplateProps {
   template: Template;
@@ -12,18 +13,15 @@ interface SelectedTemplateProps {
 
 const SelectedTemplate = ({ template, onClose }: SelectedTemplateProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [showForm, setShowForm] = useState(false);
   
   const handleUseTemplate = () => {
-    toast.success("Template selected successfully!");
-    toast("Redirecting to editor...", {
-      duration: 2000,
-    });
-    
-    // Simulate redirect after toast
-    setTimeout(() => {
-      window.location.href = template.demoUrl;
-    }, 2000);
+    setShowForm(true);
   };
+
+  if (showForm) {
+    return <TemplateForm template={template} onClose={onClose} />;
+  }
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm animate-fade-in">

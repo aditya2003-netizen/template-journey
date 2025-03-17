@@ -58,10 +58,10 @@ export const templates: Template[] = [
   {
     id: "t6",
     name: "Howard Elliott",
-    description: "Buy you favorite furniture from Howard Elliott at lowest price.",
+    description: "Elegant furniture showcase template with product galleries and online ordering.",
     image: "images/howard_elliott.png",
     demoUrl: "https://howardelliott.wizcommerce.com/",
-    category: "Resume",
-    tags: ["job", "career", "professional"]
+    category: "E-commerce",
+    tags: ["furniture", "home", "interior", "shopping"]
   }
 ];
