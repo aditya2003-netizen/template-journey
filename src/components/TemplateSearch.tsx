@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Search, ArrowRight } from "lucide-react";
 import { toast } from 'sonner';
+import { templates } from "@/data/templates";
 
 interface TemplateSearchProps {
   onSearch: (query: string) => void;
@@ -27,6 +28,9 @@ const TemplateSearch = ({ onSearch }: TemplateSearchProps) => {
       setIsSearching(false);
     }, 1500);
   };
+
+  // Get unique categories from templates
+  const categories = Array.from(new Set(templates.map(template => template.category)));
 
   return (
     <div className="max-w-3xl mx-auto">
@@ -62,29 +66,35 @@ const TemplateSearch = ({ onSearch }: TemplateSearchProps) => {
       </form>
       
       <div className="mt-4 flex justify-center gap-2 flex-wrap">
+        {categories.map(category => (
+          <button 
+            key={category}
+            onClick={() => {
+              setPrompt(category);
+              onSearch(category);
+            }}
+            className="text-xs bg-secondary hover:bg-secondary/70 px-3 py-1.5 rounded-full transition-colors"
+          >
+            {category}
+          </button>
+        ))}
         <button 
-          onClick={() => setPrompt("E-commerce store with product gallery")}
+          onClick={() => {
+            setPrompt("minimalist creative professional");
+            onSearch("minimalist creative professional");
+          }}
           className="text-xs bg-secondary hover:bg-secondary/70 px-3 py-1.5 rounded-full transition-colors"
         >
-          E-commerce
+          Creative
         </button>
         <button 
-          onClick={() => setPrompt("Portfolio site for a designer")}
+          onClick={() => {
+            setPrompt("content articles");
+            onSearch("content articles");
+          }}
           className="text-xs bg-secondary hover:bg-secondary/70 px-3 py-1.5 rounded-full transition-colors"
         >
-          Portfolio
-        </button>
-        <button 
-          onClick={() => setPrompt("Business landing page with contact form")}
-          className="text-xs bg-secondary hover:bg-secondary/70 px-3 py-1.5 rounded-full transition-colors"
-        >
-          Business
-        </button>
-        <button 
-          onClick={() => setPrompt("Blog with content management")}
-          className="text-xs bg-secondary hover:bg-secondary/70 px-3 py-1.5 rounded-full transition-colors"
-        >
-          Blog
+          Content
         </button>
       </div>
     </div>
