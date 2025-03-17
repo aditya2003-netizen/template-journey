@@ -45,7 +45,8 @@ const TemplateForm = ({ template, onClose }: TemplateFormProps) => {
       ...data,
       templateId: template.id,
       templateName: template.name,
-      templateImage: template.image
+      templateImage: template.image,
+      templateUrl: template.demoUrl // Add the template URL
     }));
     
     toast.success("Your template is being generated!");

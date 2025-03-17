@@ -57,11 +57,11 @@ export const templates: Template[] = [
   },
   {
     id: "t6",
-    name: "Howard Elliott",
-    description: "Elegant furniture showcase template with product galleries and online ordering.",
+    name: "Personal CV",
+    description: "Highlight your skills and experience with this professional CV template.",
     image: "images/howard_elliott.png",
     demoUrl: "https://howardelliott.wizcommerce.com/",
-    category: "E-commerce",
-    tags: ["furniture", "home", "interior", "shopping"]
+    category: "Resume",
+    tags: ["job", "career", "professional"]
   }
 ];
