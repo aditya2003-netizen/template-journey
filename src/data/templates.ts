@@ -41,8 +41,8 @@ export const templates: Template[] = [
     id: "t4",
     name: "Blog Platform",
     description: "A complete blog template with featured posts, categories, and author profiles.",
-    image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1170&auto=format&fit=crop",
-    demoUrl: "https://example.com/demo/blog",
+    image: "images/pdhomes.png",
+    demoUrl: "https://pdhome.wizcommerce.com/",
     category: "Blog",
     tags: ["content", "articles", "writers"]
   },
@@ -50,8 +50,8 @@ export const templates: Template[] = [
     id: "t5",
     name: "Restaurant Website",
     description: "Showcase your menu, location, and take reservations with this restaurant template.",
-    image: "https://images.unsplash.com/photo-1553527922-767df645c5f5?q=80&w=1170&auto=format&fit=crop",
-    demoUrl: "https://example.com/demo/restaurant",
+    image: "images/creemers.png",
+    demoUrl: "https://creemers.wizcommerce.com/",
     category: "Food & Beverage",
     tags: ["dining", "food", "hospitality"]
   },
@@ -59,8 +59,8 @@ export const templates: Template[] = [
     id: "t6",
     name: "Personal CV",
     description: "Highlight your skills and experience with this professional CV template.",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=1170&auto=format&fit=crop",
-    demoUrl: "https://example.com/demo/cv",
+    image: "images/howard_elliott.png",
+    demoUrl: "https://howardelliott.wizcommerce.com/",
     category: "Resume",
     tags: ["job", "career", "professional"]
   }
