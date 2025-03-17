@@ -30,7 +30,7 @@ const SelectedTemplate = ({ template, onClose }: SelectedTemplateProps) => {
       <div className="w-full max-w-4xl bg-white dark:bg-gray-900 rounded-xl shadow-xl overflow-hidden relative max-h-[90vh] animate-scale-in">
         <button 
           onClick={onClose}
-          className="absolute right-4 top-4 z-10 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white p-1.5 rounded-full transition-colors"
+          className="absolute right-4 top-4 z-10  p-1.5 rounded-full transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
