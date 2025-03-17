@@ -16,6 +16,7 @@ const Index = () => {
     setSearchPerformed(true);
     
     if (!query.trim()) {
+      console.log('hi');
       setFilteredTemplates(allTemplates);
       return;
     }
@@ -46,7 +47,7 @@ const Index = () => {
         template.tags.some(tag => tag.toLowerCase().includes(term) || term.includes(tag.toLowerCase()))
       );
       
-      return nameMatch || descriptionMatch || categoryMatch || tagMatch || termMatch;
+      return nameMatch || categoryMatch || tagMatch || termMatch;
     });
     
     setFilteredTemplates(matches);

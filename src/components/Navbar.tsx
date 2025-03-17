@@ -29,26 +29,26 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <span className="text-xl font-semibold tracking-tight">Template Hub</span>
           <div className="hidden md:flex items-center ml-10 space-x-1">
-            <a href="#" className="nav-link">Browse</a>
-            <a href="#" className="nav-link">Categories</a>
-            <a href="#" className="nav-link">Pricing</a>
-            <a href="#" className="nav-link">About</a>
+            {/* <a href="#" className="nav-link">Browse</a> */}
+            {/* <a href="#" className="nav-link">Categories</a> */}
+            {/* <a href="#" className="nav-link">Pricing</a> */}
+            {/* <a href="#" className="nav-link">About</a> */}
           </div>
         </div>
 
         <div className="flex items-center gap-4">
-          <div className="relative hidden md:flex items-center">
+          {/* <div className="relative hidden md:flex items-center">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
             <input
               type="text"
               placeholder="Search templates..."
               className="pl-10 pr-4 py-2 rounded-full bg-secondary/80 border-none focus:outline-none focus:ring-1 focus:ring-primary/30 w-[180px] text-sm transition-all duration-300 focus:w-[240px]"
             />
-          </div>
+          </div> */}
           
-          <button className="bg-primary text-primary-foreground rounded-full px-4 py-2 text-sm font-medium transition-colors hover:bg-primary/90 button-hover-effect">
+          {/* <button className="bg-primary text-primary-foreground rounded-full px-4 py-2 text-sm font-medium transition-colors hover:bg-primary/90 button-hover-effect">
             Get Started
-          </button>
+          </button> */}
           
           <button 
             className="md:hidden p-1" 

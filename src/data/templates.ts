@@ -57,8 +57,8 @@ export const templates: Template[] = [
   },
   {
     id: "t6",
-    name: "Personal CV",
-    description: "Highlight your skills and experience with this professional CV template.",
+    name: "Howard Elliott",
+    description: "Buy you favorite furniture from Howard Elliott at lowest price.",
     image: "images/howard_elliott.png",
     demoUrl: "https://howardelliott.wizcommerce.com/",
     category: "Resume",

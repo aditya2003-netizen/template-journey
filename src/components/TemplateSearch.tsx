@@ -15,10 +15,10 @@ const TemplateSearch = ({ onSearch }: TemplateSearchProps) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!prompt.trim()) {
-      toast.error("Please enter a description of what you're looking for");
-      return;
-    }
+    // if (!prompt.trim()) {
+    //   toast.error("Please enter a description of what you're looking for");
+    //   return;
+    // }
     
     setIsSearching(true);
     
