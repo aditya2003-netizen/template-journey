@@ -12,28 +12,28 @@ export interface Template {
 export const templates: Template[] = [
   {
     id: "t1",
-    name: "Modern Portfolio",
+    name: "Modern Portfolio - Freyrs",
     description: "A clean, minimalist portfolio template perfect for designers and creatives.",
     image: "images/freyrs.png",
-    demoUrl: "https://example.com/demo/portfolio",
+    demoUrl: "https://freyrs.wizcommerce.com/",
     category: "Portfolio",
     tags: ["minimalist", "creative", "professional"]
   },
   {
     id: "t2",
-    name: "E-commerce Storefront",
+    name: "E-commerce Store - Antique Curiosities",
     description: "A complete e-commerce solution with product listings, cart, and checkout.",
-    image: "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=1170&auto=format&fit=crop",
-    demoUrl: "https://example.com/demo/ecommerce",
+    image: "images/antique.png",
+    demoUrl: "https://antiquecuriosities.com/",
     category: "E-commerce",
     tags: ["shop", "business", "retail"]
   },
   {
     id: "t3",
-    name: "Corporate Landing Page",
+    name: "Fashion Forward rugs - Kas Rugs",
     description: "Professional landing page designed for businesses and startups.",
-    image: "https://images.unsplash.com/photo-1497215842964-222b430dc094?q=80&w=1170&auto=format&fit=crop",
-    demoUrl: "https://example.com/demo/corporate",
+    image: "images/image.png",
+    demoUrl: "https://kasrugs.wizcommerce.com/",
     category: "Business",
     tags: ["corporate", "professional", "business"]
   },
