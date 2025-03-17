@@ -14,7 +14,7 @@ export const templates: Template[] = [
     id: "t1",
     name: "Modern Portfolio",
     description: "A clean, minimalist portfolio template perfect for designers and creatives.",
-    image: "https://images.unsplash.com/photo-1517292987719-0369a794ec0f?q=80&w=1074&auto=format&fit=crop",
+    image: "images/freyrs.png",
     demoUrl: "https://example.com/demo/portfolio",
     category: "Portfolio",
     tags: ["minimalist", "creative", "professional"]
