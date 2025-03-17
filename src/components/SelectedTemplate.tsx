@@ -5,6 +5,7 @@ import { Template } from "@/data/templates";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import TemplateForm from "./TemplateForm";
+import { useNavigate } from "react-router-dom";
 
 interface SelectedTemplateProps {
   template: Template;
@@ -13,33 +14,34 @@ interface SelectedTemplateProps {
 
 const SelectedTemplate = ({ template, onClose }: SelectedTemplateProps) => {
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [showForm, setShowForm] = useState(false);
-  
+  // const [showForm, setShowForm] = useState(false);
+
   const handleUseTemplate = () => {
-    setShowForm(true);
+    window.location.href = template?.demoUrl;
+    // setShowForm(true);
   };
 
-  if (showForm) {
-    return <TemplateForm template={template} onClose={onClose} />;
-  }
+  // if (showForm) {
+  //   return <TemplateForm template={template} onClose={onClose} />;
+  // }
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm animate-fade-in">
       <div className="w-full max-w-4xl bg-white dark:bg-gray-900 rounded-xl shadow-xl overflow-hidden relative max-h-[90vh] animate-scale-in">
-        <button 
+        <button
           onClick={onClose}
           className="absolute right-4 top-4 z-10  p-1.5 rounded-full transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
-        
+
         <div className="grid md:grid-cols-2 h-full">
           <div className="relative aspect-video md:aspect-auto w-full h-full overflow-hidden bg-black">
             {!imageLoaded && (
               <div className="absolute inset-0 bg-muted animate-pulse-subtle" />
             )}
-            <img 
-              src={template.image} 
+            <img
+              src={template.image}
               alt={template.name}
               className={cn(
                 "w-full h-full object-cover",
@@ -52,27 +54,27 @@ const SelectedTemplate = ({ template, onClose }: SelectedTemplateProps) => {
               <p className="text-white/80 text-sm mt-1">{template.category}</p>
             </div>
           </div>
-          
+
           <div className="p-6 overflow-y-auto">
             <div className="hidden md:block">
               <h2 className="text-2xl font-medium">{template.name}</h2>
               <p className="text-muted-foreground">{template.category}</p>
             </div>
-            
+
             <div className="mt-6 space-y-4">
               <p>{template.description}</p>
-              
+
               <div className="flex flex-wrap gap-2 mt-4">
                 {template.tags.map((tag) => (
-                  <span 
-                    key={tag} 
+                  <span
+                    key={tag}
                     className="px-3 py-1 bg-secondary text-sm rounded-full"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              
+
               <div className="space-y-2 mt-6">
                 <h3 className="font-medium">Features</h3>
                 <ul className="space-y-1">
@@ -90,18 +92,21 @@ const SelectedTemplate = ({ template, onClose }: SelectedTemplateProps) => {
                   ))}
                 </ul>
               </div>
-              
+
               <div className="flex items-center gap-3 mt-8">
-                <button
-                  onClick={handleUseTemplate}
-                  className="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg flex items-center gap-2 transition-colors flex-1"
-                >
-                  Use this template
-                </button>
-                
-                <a 
-                  href={template.demoUrl} 
-                  target="_blank" 
+                <a href={template.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <button
+                    // onClick={handleUseTemplate}
+                    className="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg flex items-center gap-2 transition-colors flex-1"
+                  >
+                    Use this template
+                  </button>
+                </a>
+                <a
+                  href={template.demoUrl}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="bg-secondary hover:bg-secondary/70 px-5 py-2 rounded-lg flex items-center gap-2 transition-colors"
                 >
